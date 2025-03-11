@@ -1,0 +1,197 @@
+:root {
+    --color-primary: #4b74fd;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #2bc2fe;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #180202;
+    --color-dark: #222222;
+    --color-light: #f1f1f1;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #98a7f3, #131d55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-light);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(83, 72, 72, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Banner */
+.header-banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-banner h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-banner img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+/* Sección de entrada */
+.input-section {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Títulos */
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 12px 18px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-name:focus {
+    border-color: var(--color-button);
+    box-shadow: 0 0 10px rgba(129, 92, 13, 0.5);
+}
+
+/* Estilos de botones */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón añadir */
+.button-add {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 8px;
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+/* Estilo del botón sortear */
+.button-draw {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button);
+    transform: scale(1.05);
+}
+
+.button-draw img {
+    width: 20px;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Resultado */
+.result-list {
+    margin-top: 20px;
+    color: var(--color-dark);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos de transición */
+input, button {
+    transition: all 0.3s ease;
+}
+
+input:focus, button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
